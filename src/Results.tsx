@@ -8,7 +8,7 @@ interface Props<T> {
   // list of result items
   items: Array<T>;
   // max container height
-  maxHeight?: React.CSSLength;
+  maxHeight?: React.CSSProperties['maxHeight'];
   // onClick callback
   onClickItem?: (e: any /* Event */) => void;
   // onMouseEnter callback

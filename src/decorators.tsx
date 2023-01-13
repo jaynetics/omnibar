@@ -20,7 +20,7 @@ export function command<T>(
       return [];
     }
 
-    if (!lq.startsWith(lc + ' ')) {
+    if (lq.indexOf(lc + ' ') !== 0) {
       return [];
     }
 
