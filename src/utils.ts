@@ -19,6 +19,7 @@ export function flatten<T>(list: Array<Array<T>>): Array<T> {
  * @return {Function}
  */
 export function debounce(fn: any, wait: number): any {
+  // TODO: this can leak if component unmounts
   let timeout: NodeJS.Timer = null;
   return (...args: Array<any>) => {
     const ctx = this;

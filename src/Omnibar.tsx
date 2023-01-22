@@ -126,6 +126,7 @@ export default class Omnibar<T> extends React.PureComponent<
     if (this.props.onBlur) {
       this.props.onBlur(evt);
     }
+    // TODO: this can leak if component unmounts
     setTimeout(() => this.setState({ displayResults: false }), BLUR_DELAY);
   };
 
