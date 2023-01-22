@@ -1,8 +1,10 @@
-# Omnibar
+# Omnibar2
 
-[![Travis](https://img.shields.io/travis/vutran/omnibar/master.svg?maxAge=2592000&style=flat-square)](https://travis-ci.org/vutran/omnibar) [![Coveralls branch](https://img.shields.io/coveralls/vutran/omnibar/master.svg?maxAge=2592000&style=flat-square)](https://coveralls.io/github/vutran/omnibar) [![license](https://img.shields.io/github/license/vutran/omnibar.svg?maxAge=2592000&style=flat-square)](LICENSE)
+[![license](https://img.shields.io/github/license/jaynetics/omnibar2.svg?maxAge=2592000)](LICENSE) [![npm version](https://img.shields.io/npm/v/omnibar2.svg?style=flat)](https://www.npmjs.com/package/omnibar2) [![Build Status](https://github.com/jaynetics/js_regex/workflows/tests/badge.svg)](https://github.com/jaynetics/js_regex/actions) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/jaynetics/omnibar2/pulls)
 
 > Extensible search component for React.
+
+*Please note:* this is a fork and drop-in replacement of the unmaintained [vutran/omnibar](https://github.com/vutran/omnibar). It might be merged back into that at some point if the owners desire to continue the project themselves.
 
 ![](screenshot.png?raw=true)
 
@@ -13,7 +15,7 @@ The demo can be found in [this repository](https://github.com/vutran/omnibar-www
 ## Install
 
 ```bash
-$ npm i -S omnibar
+$ npm i -S omnibar2
 ```
 
 ## Usage
@@ -21,7 +23,7 @@ $ npm i -S omnibar
 Import the module and your extensions
 
 ```jsx
-import Omnibar from 'omnibar';
+import Omnibar from 'omnibar2';
 import Foo from './Foo';
 import Bar from './Bar';
 ```
@@ -150,7 +152,7 @@ The `command()` helper will wrap your extension through a command prefix and wil
 **Example**:
 
 ```js
-import { command } from 'omnibar';
+import { command } from 'omnibar2';
 
 function MyExtension() {
   return [
@@ -178,7 +180,7 @@ The `withExtensions` is a HOC factory method to enhance your Omnibar with your o
 **Example**
 
 ```js
-import Omnibar, { withExtensions } from 'omnibar';
+import Omnibar, { withExtensions } from 'omnibar2';
 
 const GitSearchBar = withExtensions([GitHub])(Omnibar);
 const NpmSearchBar = withExtensions([Npm])(Omnibar);
@@ -213,7 +215,7 @@ The `withVoice` is another HOC factory method to enhance your Omnibar with voice
 **Example**
 
 ```js
-import Omnibar, { withVoice } from 'omnibar';
+import Omnibar, { withVoice } from 'omnibar2';
 
 const VoiceBar = withVoice(Omnibar);
 

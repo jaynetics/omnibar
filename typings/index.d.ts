@@ -72,7 +72,7 @@ declare namespace Omnibar {
   }
 }
 
-declare module 'omnibar' {
+declare module 'omnibar2' {
   export default class Omnibar<T> extends React.Component<
     Omnibar.Props<T>,
     Omnibar.State<T>
