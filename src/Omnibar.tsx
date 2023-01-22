@@ -76,12 +76,9 @@ export default class Omnibar<T> extends React.PureComponent<
     });
   };
 
-  action = () => {
-    // uses the hovered index if the user is currently
-    // mousing over an item, falls back on the
-    // selected index
+  action = (isClick = false) => {
     const idx =
-      this.state.hoveredIndex > -1
+      isClick && this.state.hoveredIndex > -1
         ? this.state.hoveredIndex
         : this.state.selectedIndex;
     const item = this.state.results[idx];
@@ -143,7 +140,7 @@ export default class Omnibar<T> extends React.PureComponent<
   handleClickItem = (e: any) => {
     e.preventDefault();
     if (this.state.hoveredIndex > -1) {
-      this.action();
+      this.action(true);
     }
   };
 
