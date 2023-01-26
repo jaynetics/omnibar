@@ -261,7 +261,7 @@ const GitVoiceSearch = compose(
 | `onQuery`            | `Function`            |           | Triggered when a query is made                                                                     |
 | `placeholder`        | `string`              |           | Input placeholder                                                                                  |
 | `render`             | `Function`            |           | Alias of `children`                                                                                |
-| `resultStyle`        | `object`              |           | Style object override for the result container                                                     |
+| `resultStyle`        | `React.CSSProperties` |           | Style object override for the result container                                                     |
 | `style`              | `React.CSSProperties` |           | Style object override for the `<input />` element                                                  |
 | `value`              | `string`              |           | Optional value to send to the Omnibar.                                                             |
 
