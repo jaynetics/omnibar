@@ -26,6 +26,7 @@ interface Props<T> {
 }
 
 const LIST_STYLE: React.CSSProperties = {
+  all: 'revert',
   position: 'absolute',
   width: '100%',
   zIndex: 2,

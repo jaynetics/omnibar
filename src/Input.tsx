@@ -6,6 +6,7 @@ interface Props extends React.HTMLProps<HTMLInputElement> {}
 interface State {}
 
 const INPUT_STYLE: React.CSSProperties = {
+  all: 'revert',
   borderColor: COLORS.DARKGRAY,
   borderStyle: 'solid',
   borderWidth: 1,
