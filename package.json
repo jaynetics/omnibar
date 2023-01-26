@@ -15,7 +15,7 @@
     "url": "https://github.com/jaynetics/omnibar2.git"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c --bundleConfigAsCjs",
     "format": "npm run format:js && npm run format:md",
     "format:js": "prettier --write '{*.js,*.json,{src,__tests__,typings}/**/*.ts{,x}}'",
     "format:md": "prettier --parser markdown --write '*.md'",
