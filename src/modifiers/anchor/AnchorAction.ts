@@ -1,6 +1,4 @@
-import { AnchorItem } from './';
-
-export default function AnchorAction(item: AnchorItem) {
+export default function AnchorAction(item: Omnibar.AnchorItem) {
   if (item.url) {
     window.location.href = item.url;
   }

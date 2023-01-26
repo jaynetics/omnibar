@@ -12,16 +12,19 @@ declare namespace Omnibar {
 
   // Renderers
   type ResultRenderer<T> = (
-    {
-      item,
-      isSelected,
-      isHighlighted,
-    }: {
-      item: T;
-      isSelected: boolean;
-      isHighlighted: boolean;
-    } & React.HTMLAttributes<HTMLElement>
+    { item, isSelected, isHighlighted }: ResultRendererArgs<T>
   ) => JSX.Element;
+
+  interface ResultRendererArgs<T> extends React.HTMLAttributes<HTMLElement> {
+    item: AnchorItem & T;
+    isSelected: boolean;
+    isHighlighted: boolean;
+  }
+
+  interface AnchorItem {
+    title: string;
+    url?: string;
+  }
 
   interface Props<T> {
     // optionally make the Omnibar autoFocus
@@ -90,4 +93,7 @@ declare module 'omnibar2' {
   export function withExtensions<T extends typeof Omnibar>(
     extensions: Array<Omnibar.Extension<T>>
   ): (Component: T) => React.ComponentClass<Omnibar.Props<T>>;
+  export function buildItemStyle<T>(
+    props: Omnibar.ResultRendererArgs<T>
+  ): React.CSSProperties;
 }

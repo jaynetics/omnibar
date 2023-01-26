@@ -1,15 +1,8 @@
 import * as React from 'react';
-import { AnchorItem } from './';
 import { COLORS, DEFAULT_HEIGHT } from '../../constants';
 
-interface Props<T> {
-  // the item
-  item: AnchorItem & T;
-  isSelected?: boolean;
-  isHighlighted?: boolean;
-}
-
-const ITEM_STYLE: React.CSSProperties = {
+export const ITEM_STYLE: React.CSSProperties = {
+  all: 'revert',
   borderBottomWidth: 1,
   borderColor: COLORS.DARKGRAY,
   borderLeftWidth: 1,
@@ -27,14 +20,23 @@ const ITEM_STYLE: React.CSSProperties = {
   textDecoration: 'none',
 };
 
-const ITEM_HOVER_STYLE: React.CSSProperties = {
-  backgroundColor: COLORS.GRAY,
-};
-
 export default function AnchorRenderer<T>(
-  props: Props<T> & React.HTMLAttributes<HTMLAnchorElement>
+  props: Omnibar.ResultRendererArgs<T>
 ) {
-  const { item, isSelected, isHighlighted, style, ...rest } = props;
+  const { item, ...rest } = props;
+  const mergedStyle = buildItemStyle<T>(props);
+
+  return (
+    <a href={item.url} style={mergedStyle} {...rest}>
+      {item.title}
+    </a>
+  );
+}
+
+export function buildItemStyle<T>(
+  props: Omnibar.ResultRendererArgs<T>
+): React.CSSProperties {
+  const { isSelected, isHighlighted, style } = props;
 
   const mergedStyle = { ...ITEM_STYLE, ...style };
 
@@ -46,9 +48,5 @@ export default function AnchorRenderer<T>(
     mergedStyle.backgroundColor = COLORS.DARKGRAY;
   }
 
-  return (
-    <a href={item.url} style={mergedStyle} {...rest}>
-      {item.title}
-    </a>
-  );
+  return mergedStyle;
 }
