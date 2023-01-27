@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { AnchorItem } from './modifiers/anchor';
 import AnchorRenderer from './modifiers/anchor/AnchorRenderer';
 
 interface Props<T> {

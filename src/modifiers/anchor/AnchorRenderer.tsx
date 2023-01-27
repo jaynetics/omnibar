@@ -23,7 +23,7 @@ export const ITEM_STYLE: React.CSSProperties = {
 export default function AnchorRenderer<T>(
   props: Omnibar.ResultRendererArgs<T>
 ) {
-  const { item, ...rest } = props;
+  const { item, isHighlighted, isSelected, style, ...rest } = props;
   const mergedStyle = buildItemStyle<T>(props);
 
   return (

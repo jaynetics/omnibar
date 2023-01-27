@@ -4,6 +4,7 @@ exports[`Results should render a <Results /> 1`] = `
 <ul
   style={
     Object {
+      "all": "revert",
       "backgroundColor": "#fff",
       "listStyleType": "none",
       "margin": 0,
@@ -20,6 +21,7 @@ exports[`Results should render a <Results /> 1`] = `
     onMouseLeave={[Function]}
     style={
       Object {
+        "all": "revert",
         "borderBottomWidth": 1,
         "borderColor": "#ddd",
         "borderLeftWidth": 1,
@@ -46,6 +48,7 @@ exports[`Results should render a <Results /> 1`] = `
     onMouseLeave={[Function]}
     style={
       Object {
+        "all": "revert",
         "borderBottomWidth": 1,
         "borderColor": "#ddd",
         "borderLeftWidth": 1,
@@ -73,6 +76,7 @@ exports[`Results should render a <Results /> with a custom row renderer 1`] = `
 <ul
   style={
     Object {
+      "all": "revert",
       "backgroundColor": "#fff",
       "listStyleType": "none",
       "margin": 0,
@@ -98,6 +102,7 @@ exports[`Results should render a <Results /> with a max height 1`] = `
 <ul
   style={
     Object {
+      "all": "revert",
       "backgroundColor": "#fff",
       "borderBottomColor": "#eee",
       "borderBottomStyle": "solid",
@@ -119,6 +124,7 @@ exports[`Results should render a <Results /> with a max height 1`] = `
     onMouseLeave={[Function]}
     style={
       Object {
+        "all": "revert",
         "borderBottomWidth": 1,
         "borderColor": "#ddd",
         "borderLeftWidth": 1,
@@ -145,6 +151,7 @@ exports[`Results should render a <Results /> with a max height 1`] = `
     onMouseLeave={[Function]}
     style={
       Object {
+        "all": "revert",
         "borderBottomWidth": 1,
         "borderColor": "#ddd",
         "borderLeftWidth": 1,
@@ -172,6 +179,7 @@ exports[`Results should render a <Results /> with a row height 1`] = `
 <ul
   style={
     Object {
+      "all": "revert",
       "backgroundColor": "#fff",
       "borderBottomColor": "#eee",
       "borderBottomStyle": "solid",
@@ -193,6 +201,7 @@ exports[`Results should render a <Results /> with a row height 1`] = `
     onMouseLeave={[Function]}
     style={
       Object {
+        "all": "revert",
         "borderBottomWidth": 1,
         "borderColor": "#ddd",
         "borderLeftWidth": 1,
@@ -219,6 +228,7 @@ exports[`Results should render a <Results /> with a row height 1`] = `
     onMouseLeave={[Function]}
     style={
       Object {
+        "all": "revert",
         "borderBottomWidth": 1,
         "borderColor": "#ddd",
         "borderLeftWidth": 1,
@@ -246,6 +256,7 @@ exports[`Results should render a <Results /> with a selected item 1`] = `
 <ul
   style={
     Object {
+      "all": "revert",
       "backgroundColor": "#fff",
       "listStyleType": "none",
       "margin": 0,
@@ -262,6 +273,7 @@ exports[`Results should render a <Results /> with a selected item 1`] = `
     onMouseLeave={[Function]}
     style={
       Object {
+        "all": "revert",
         "backgroundColor": "#eee",
         "borderBottomWidth": 1,
         "borderColor": "#ddd",
@@ -289,6 +301,7 @@ exports[`Results should render a <Results /> with a selected item 1`] = `
     onMouseLeave={[Function]}
     style={
       Object {
+        "all": "revert",
         "borderBottomWidth": 1,
         "borderColor": "#ddd",
         "borderLeftWidth": 1,

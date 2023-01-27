@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 import Results from '../src/Results';
-import ResultsItem from '../src/ResultsItem';
 
 describe('Results', () => {
   const items = [

@@ -22,7 +22,7 @@ declare namespace Omnibar {
   }
 
   interface AnchorItem {
-    title: string;
+    title?: string;
     url?: string;
   }
 

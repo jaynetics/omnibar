@@ -7,6 +7,7 @@ exports[`ResultsItem should render a <ResultsItem /> 1`] = `
   onMouseLeave={[Function]}
   style={
     Object {
+      "all": "revert",
       "borderBottomWidth": 1,
       "borderColor": "#ddd",
       "borderLeftWidth": 1,
@@ -36,6 +37,7 @@ exports[`ResultsItem should render a highlighted <ResultsItem /> 1`] = `
   onMouseLeave={[Function]}
   style={
     Object {
+      "all": "revert",
       "backgroundColor": "#eee",
       "borderBottomWidth": 1,
       "borderColor": "#ddd",
