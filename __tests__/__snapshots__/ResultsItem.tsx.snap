@@ -20,9 +20,12 @@ exports[`ResultsItem should render a <ResultsItem /> 1`] = `
       "fontSize": 24,
       "height": 50,
       "lineHeight": "50px",
+      "overflow": "hidden",
       "paddingLeft": 15,
       "paddingRight": 15,
       "textDecoration": "none",
+      "textOverflow": "ellipsis",
+      "whiteSpace": "nowrap",
     }
   }
 >
@@ -51,9 +54,12 @@ exports[`ResultsItem should render a highlighted <ResultsItem /> 1`] = `
       "fontSize": 24,
       "height": 50,
       "lineHeight": "50px",
+      "overflow": "hidden",
       "paddingLeft": 15,
       "paddingRight": 15,
       "textDecoration": "none",
+      "textOverflow": "ellipsis",
+      "whiteSpace": "nowrap",
     }
   }
 >

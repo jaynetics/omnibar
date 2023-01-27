@@ -18,6 +18,9 @@ export const ITEM_STYLE: React.CSSProperties = {
   paddingLeft: 15,
   paddingRight: 15,
   textDecoration: 'none',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
 };
 
 export default function AnchorRenderer<T>(

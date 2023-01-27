@@ -34,9 +34,12 @@ exports[`Results should render a <Results /> 1`] = `
         "fontSize": 24,
         "height": 50,
         "lineHeight": "50px",
+        "overflow": "hidden",
         "paddingLeft": 15,
         "paddingRight": 15,
         "textDecoration": "none",
+        "textOverflow": "ellipsis",
+        "whiteSpace": "nowrap",
       }
     }
   >
@@ -61,9 +64,12 @@ exports[`Results should render a <Results /> 1`] = `
         "fontSize": 24,
         "height": 50,
         "lineHeight": "50px",
+        "overflow": "hidden",
         "paddingLeft": 15,
         "paddingRight": 15,
         "textDecoration": "none",
+        "textOverflow": "ellipsis",
+        "whiteSpace": "nowrap",
       }
     }
   >
@@ -137,9 +143,12 @@ exports[`Results should render a <Results /> with a max height 1`] = `
         "fontSize": 24,
         "height": 50,
         "lineHeight": "50px",
+        "overflow": "hidden",
         "paddingLeft": 15,
         "paddingRight": 15,
         "textDecoration": "none",
+        "textOverflow": "ellipsis",
+        "whiteSpace": "nowrap",
       }
     }
   >
@@ -164,9 +173,12 @@ exports[`Results should render a <Results /> with a max height 1`] = `
         "fontSize": 24,
         "height": 50,
         "lineHeight": "50px",
+        "overflow": "hidden",
         "paddingLeft": 15,
         "paddingRight": 15,
         "textDecoration": "none",
+        "textOverflow": "ellipsis",
+        "whiteSpace": "nowrap",
       }
     }
   >
@@ -214,9 +226,12 @@ exports[`Results should render a <Results /> with a row height 1`] = `
         "fontSize": 24,
         "height": 50,
         "lineHeight": "50px",
+        "overflow": "hidden",
         "paddingLeft": 15,
         "paddingRight": 15,
         "textDecoration": "none",
+        "textOverflow": "ellipsis",
+        "whiteSpace": "nowrap",
       }
     }
   >
@@ -241,9 +256,12 @@ exports[`Results should render a <Results /> with a row height 1`] = `
         "fontSize": 24,
         "height": 50,
         "lineHeight": "50px",
+        "overflow": "hidden",
         "paddingLeft": 15,
         "paddingRight": 15,
         "textDecoration": "none",
+        "textOverflow": "ellipsis",
+        "whiteSpace": "nowrap",
       }
     }
   >
@@ -287,9 +305,12 @@ exports[`Results should render a <Results /> with a selected item 1`] = `
         "fontSize": 24,
         "height": 50,
         "lineHeight": "50px",
+        "overflow": "hidden",
         "paddingLeft": 15,
         "paddingRight": 15,
         "textDecoration": "none",
+        "textOverflow": "ellipsis",
+        "whiteSpace": "nowrap",
       }
     }
   >
@@ -314,9 +335,12 @@ exports[`Results should render a <Results /> with a selected item 1`] = `
         "fontSize": 24,
         "height": 50,
         "lineHeight": "50px",
+        "overflow": "hidden",
         "paddingLeft": 15,
         "paddingRight": 15,
         "textDecoration": "none",
+        "textOverflow": "ellipsis",
+        "whiteSpace": "nowrap",
       }
     }
   >
