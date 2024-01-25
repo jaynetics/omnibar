@@ -7,11 +7,11 @@ interface Props<T> {
   // the item
   item: T;
   // onMouseEnter item callback
-  onMouseEnter?: (e: any /* Event */) => void;
+  onMouseEnter?: React.MouseEventHandler;
   // onMouseLeave item callback
-  onMouseLeave?: (e: any /* Event */) => void;
+  onMouseLeave?: React.MouseEventHandler;
   // onClick callback
-  onClickItem?: (e: any /* Event */) => void;
+  onClickItem?: React.MouseEventHandler;
   // set to true if the item is currently selected
   isSelected?: boolean;
   // optional style override
@@ -35,12 +35,12 @@ export default class ResultsItem<T> extends React.PureComponent<
     isHighlighted: false,
   };
 
-  handleMouseEnter = (evt: any /* Event */) => {
+  handleMouseEnter = (evt: React.MouseEvent) => {
     this.setState({ isHighlighted: true });
     this.props.onMouseEnter && this.props.onMouseEnter(evt);
   };
 
-  handleMouseLeave = (evt: any /* Event */) => {
+  handleMouseLeave = (evt: React.MouseEvent) => {
     this.setState({ isHighlighted: false });
     this.props.onMouseLeave && this.props.onMouseLeave(evt);
   };

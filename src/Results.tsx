@@ -10,15 +10,15 @@ interface Props<T> {
   // max container height
   maxHeight?: React.CSSProperties['maxHeight'];
   // onClick callback
-  onClickItem?: (e: any /* Event */) => void;
+  onClickItem?: React.MouseEventHandler;
   // onMouseEnter callback
-  onMouseEnter?: (e: any /* Event */) => void;
+  onMouseEnter?: React.MouseEventHandler;
   // onMouseEnter item callback
-  onMouseEnterItem?: (e: any /* Event */) => void;
+  onMouseEnterItem?: (idx: number) => void;
   // onMouseLeave callback
-  onMouseLeave?: (e: any /* Event */) => void;
+  onMouseLeave?: React.MouseEventHandler;
   // onMouseLeave item callback
-  onMouseLeaveItem?: (e: any /* Event */) => void;
+  onMouseLeaveItem?: (idx: number) => void;
   // the currently selected index
   selectedIndex: number;
   // optional override container style
