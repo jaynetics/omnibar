@@ -8,8 +8,6 @@ declare namespace Omnibar {
   type FunctionalExtension<T> = (query: string) => Results<T>;
   type Extension<T> = FunctionalExtension<T>;
 
-  type MouseEvent = (evt: any) => void;
-
   // Renderers
   type ResultRenderer<T> = (
     { item, isSelected, isHighlighted }: ResultRendererArgs<T>

@@ -8,16 +8,6 @@ export const COLORS = {
   WHITE: '#fff',
 };
 
-export const KEYS = {
-  BACKSPACE: 8,
-  TAB: 9,
-  ENTER: 13,
-  LEFT: 37,
-  UP: 38,
-  RIGHT: 39,
-  DOWN: 40,
-};
-
 export const BLUR_DELAY = 200;
 
 export const DEFAULT_HEIGHT = 50;

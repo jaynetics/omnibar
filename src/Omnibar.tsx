@@ -2,7 +2,7 @@ import * as React from 'react';
 import Input from './Input';
 import Results from './Results';
 import search from './search';
-import { KEYS, BLUR_DELAY, DEFAULT_HEIGHT } from './constants';
+import { BLUR_DELAY, DEFAULT_HEIGHT } from './constants';
 import AnchorAction from './modifiers/anchor/AnchorAction';
 import { debounce } from './utils';
 
@@ -98,17 +98,17 @@ export default class Omnibar<T> extends React.PureComponent<
     }
   };
 
-  handleKeyDown = (evt: any /* Event */) => {
-    switch (evt.keyCode) {
-      case KEYS.UP:
+  handleKeyDown = (evt: React.KeyboardEvent) => {
+    switch (evt.key) {
+      case 'ArrowUp':
         this.prev();
         evt.preventDefault();
         break;
-      case KEYS.DOWN:
+      case 'ArrowDown':
         this.next();
         evt.preventDefault();
         break;
-      case KEYS.ENTER:
+      case 'Enter':
         this.action();
         break;
     }
