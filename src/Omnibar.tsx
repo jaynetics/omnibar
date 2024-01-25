@@ -63,19 +63,17 @@ export default class Omnibar<T> extends React.PureComponent<
 
   prev = () => {
     this.setState((prevState: Omnibar.State<T>) => {
-      const selectedIndex = prevState.selectedIndex - 1;
-      if (selectedIndex >= 0) {
-        return { selectedIndex };
-      }
+      let selectedIndex = prevState.selectedIndex - 1;
+      if (selectedIndex < 0) selectedIndex = prevState.results.length - 1;
+      return { selectedIndex };
     });
   };
 
   next = () => {
     this.setState((prevState: Omnibar.State<T>) => {
-      const selectedIndex = prevState.selectedIndex + 1;
-      if (selectedIndex < prevState.results.length) {
-        return { selectedIndex };
-      }
+      let selectedIndex = prevState.selectedIndex + 1;
+      if (selectedIndex >= prevState.results.length) selectedIndex = 0
+      return { selectedIndex };
     });
   };
 
