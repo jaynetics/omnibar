@@ -26,6 +26,7 @@ export default class Omnibar<T> extends React.PureComponent<
   state: Omnibar.State<T> = {
     displayResults: false,
     hoveredIndex: -1,
+    runningQuery: null,
     results: [],
     selectedIndex: 0,
   };
@@ -36,9 +37,15 @@ export default class Omnibar<T> extends React.PureComponent<
   }
 
   query = (value: string) => {
-    if (this.props.extensions.length > 0) {
-      search<T>(value, this.props.extensions).then(results => {
+    if (this.props.extensions.length > 0 && this.state.runningQuery !== value) {
+      this.props.onQueryStart && this.props.onQueryStart(value);
+
+      this.setState({ runningQuery: value }, async () => {
+        const results = await search<T>(value, this.props.extensions);
+        if (this.state.runningQuery !== value) return undefined;
+
         this.setState({
+          runningQuery: null,
           results:
             this.props.maxResults > 0
               ? results.slice(0, this.props.maxResults)
@@ -49,7 +56,8 @@ export default class Omnibar<T> extends React.PureComponent<
               ? Math.min(this.state.selectedIndex, results.length - 1)
               : 0,
         });
-        this.props.onQuery && this.props.onQuery(results);
+        this.props.onQueryEnd && this.props.onQueryEnd(value, results);
+        this.props.onQuery && this.props.onQuery(results); // for backwards compatibility
       });
     }
   };
@@ -57,6 +65,7 @@ export default class Omnibar<T> extends React.PureComponent<
   reset() {
     this.setState({
       results: [],
+      runningQuery: null,
       displayResults: false,
     });
   }
@@ -72,7 +81,7 @@ export default class Omnibar<T> extends React.PureComponent<
   next = () => {
     this.setState((prevState: Omnibar.State<T>) => {
       let selectedIndex = prevState.selectedIndex + 1;
-      if (selectedIndex >= prevState.results.length) selectedIndex = 0
+      if (selectedIndex >= prevState.results.length) selectedIndex = 0;
       return { selectedIndex };
     });
   };
@@ -130,7 +139,7 @@ export default class Omnibar<T> extends React.PureComponent<
 
   handleFocus = (evt: React.FocusEvent<HTMLInputElement>) => {
     if (this.state.results.length === 0 && this.props.showEmpty) {
-      this.query("");
+      this.query('');
     }
     if (this.props.onFocus) {
       this.props.onFocus(evt);
@@ -156,11 +165,13 @@ export default class Omnibar<T> extends React.PureComponent<
       rootStyle,
       resultStyle,
       onQuery,
+      onQueryStart,
+      onQueryEnd,
       onAction,
       onFocus,
       onBlur,
       showEmpty,
-      ...rest
+      ...inputHTMLAttributes
     } = this.props;
 
     let maxHeight = maxViewableResults
@@ -174,7 +185,7 @@ export default class Omnibar<T> extends React.PureComponent<
     return (
       <div style={rootStyle}>
         <Input
-          {...rest}
+          {...inputHTMLAttributes}
           onBlur={this.handleBlur}
           onChange={this.handleChange}
           onFocus={this.handleFocus}

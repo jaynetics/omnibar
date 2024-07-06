@@ -41,8 +41,15 @@ declare namespace Omnibar {
     maxViewableResults?: number;
     // optional action override
     onAction?: (item: T) => void;
-    // triggered when a query is made
+    // triggered when a query is initiated
+    onQueryStart?: (query: string) => void;
+    // triggered when a query is completed
+    /**
+     * @deprecated use onQueryEnd instead
+     */
     onQuery?: (items: Array<T>) => void;
+    // triggered when a query is completed
+    onQueryEnd?: (query: string, results: Array<T>) => void;
     // optional input placeholder text
     onFocus?: (evt: React.FocusEvent<HTMLInputElement>) => void;
     // optional input placeholder text
@@ -64,6 +71,8 @@ declare namespace Omnibar {
   interface State<T> {
     // list of matching results
     results: Array<T>;
+    // query that is currently running
+    runningQuery?: string;
     // current selected index (applies action upon key event)
     selectedIndex: number;
     // current mouse hovered index (applies action click event)

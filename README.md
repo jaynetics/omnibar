@@ -4,13 +4,15 @@
 
 > Extensible search component for React.
 
-*Please note:* this is a fork and drop-in replacement of the unmaintained [vutran/omnibar](https://github.com/vutran/omnibar). It might be merged back into that at some point if the owners desire to continue the project themselves.
+_Please note:_ this is a fork and drop-in replacement of the unmaintained [vutran/omnibar](https://github.com/vutran/omnibar). It might be merged back into that at some point if the owners desire to continue the project themselves.
 
 ![](screenshot.png?raw=true)
 
 ## Demo
 
 The demo can be found in [this repository](https://github.com/vutran/omnibar-www).
+
+See also [rails_omnibar](https://github.com/jaynetics/rails_omnibar) as an example project.
 
 ## Install
 
@@ -258,7 +260,8 @@ const GitVoiceSearch = compose(
 | `maxResults`         | `number`              |           | The maximum amount of results to display overall.                                                  |
 | `maxViewableResults` | `number`              |           | The maximum amount of results to display in the viewable container (before scrolling).             |
 | `onAction`           | `Function`            |           | Apply an action callback when an item is executed. Arguments: `item`                               |
-| `onQuery`            | `Function`            |           | Triggered when a query is made                                                                     |
+| `onQueryStart`       | `Function`            |           | Triggered when a query is initiated                                                                |
+| `onQueryEnd`         | `Function`            |           | Triggered when a query is completed                                                                |
 | `placeholder`        | `string`              |           | Input placeholder                                                                                  |
 | `render`             | `Function`            |           | Alias of `children`                                                                                |
 | `resultStyle`        | `React.CSSProperties` |           | Style object override for the result container                                                     |
